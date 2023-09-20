@@ -15,10 +15,11 @@ def is_file(file_name):
     return os.path.isfile(f"{DST_DIR}/{file_name}{FORMAT_SUFFIX}")
 
 def copy(path):
-    update_path = f"{path}-{int(time.time() * 100000)}"
+    # update_path = f"{path}-{int(time.time() * 100000)}"
 
-    shutil.copy(f"{DST_DIR}/{path}{FORMAT_SUFFIX}", f"{DST_DIR}/{update_path}{FORMAT_SUFFIX}")
-    print(f"CP file: {DST_DIR}/{update_path}{FORMAT_SUFFIX}")
+    # shutil.copy(f"{DST_DIR}/{path}{FORMAT_SUFFIX}", f"{DST_DIR}/{update_path}{FORMAT_SUFFIX}")
+    # print(f"CP file: {DST_DIR}/{update_path}{FORMAT_SUFFIX}")
+    print(f"Skipped downloading duplicate files: {path}")
 
 def download_file(path, dst_path):
     try:
