@@ -6,6 +6,8 @@ from config import *
 import time
 
 def refresh():
+    if (not os.path.isdir(DST_DIR)):
+        os.mkdir(DST_DIR)
     shutil.rmtree(DST_DIR)
     os.mkdir(DST_DIR)
 
