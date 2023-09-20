@@ -27,5 +27,3 @@ def create_result(list):
                 canvas[i * height:(i + 1) * height, j * width:(j + 1) * width] = trimmed_img
 
     cv2.imwrite(f"{DST_DIR}/result.png", canvas)
-
-create_result(p.load_deck_file())
