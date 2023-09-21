@@ -1,18 +1,16 @@
 import files as f
-import parse as p
 import image as im
 from config import *
 
-list = p.load_deck_file()
+def main(list):
+    # ファイルをクリアする
+    f.refresh()
 
-# ファイルをクリアする
-f.refresh()
+    for name in list:
+        f.is_file(name)
 
-for name in list:
-     f.is_file(name)
+    # 画像ファイルをDLする
+    for name in list:
+        f.download_file_to_dir(name)
 
-# 画像ファイルをDLする
-for name in list:
-    f.download_file_to_dir(name)
-
-im.create_result(list)
+    im.create_result(list)
