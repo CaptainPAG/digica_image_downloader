@@ -25,12 +25,11 @@ def submit():
         path = fr"{os.getcwd()}\cards"
         subprocess.Popen(['explorer', path], shell=True)
 
-root.title = "Deck Image Transfer"
+root.title("Deck Image Downloader")
 
 x, y = 300, 400
 root.minsize(y, x)
 root.geometry(f"{y}x{x}")
-root.title("digica image downloader")
 
 label = t.Label(root, text="IMPORT text by generated Deck Builder")
 label.pack(pady=10, padx=10)
